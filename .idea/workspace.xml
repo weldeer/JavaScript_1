@@ -49,6 +49,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="240" />
+    <option name="y" value="130" />
+    <option name="width" value="1440" />
+    <option name="height" value="780" />
+  </component>
   <component name="ProjectId" id="1hGnAVxY7lzRzQUhniDZ3c7064R" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
