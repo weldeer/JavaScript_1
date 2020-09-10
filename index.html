@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<h1>Привет</h1>
-<div>
-    <p>q456</p>
-    <p>q789</p>
-</div>
-<div>
-    <p>q123</p>
-    <p>q789</p>
+<h1>Урок 5. Введение в DOM. Практическое задание. Шахматная доска</h1>
+
+<div class="js__target">
     <button onclick="test()">Click me</button>
-</div>п
-<div>
-    <p>w456</p>
-    <p>w789</p>
+    <button onclick="ViewBasket()">Корзина</button>
+    <button onclick="createCheessBoard()">Создать шахматную доску</button>
+
 </div>
+
+
+<div class="board">
+    <table class="chess-board">
+        <tr>
+            <td class="white"></td>
+            <td class="black"></td>
+        </tr>
+
+    </table>
+</div>
+
+
 
 <body>
 
