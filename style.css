@@ -10,6 +10,7 @@ td{
     outline: 1px solid;
     text-align: center;
     vertical-align: middle;
+    font-size: 60px;
 }
 
 .black{
@@ -17,6 +18,7 @@ td{
     outline: 1px solid;
     text-align: center;
     vertical-align: middle;
+    font-size: 60px;
 }
 
 /*https://snipp.ru/html-css/chess-field*/

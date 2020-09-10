@@ -71,25 +71,60 @@ function createCheessBoard() {
 
     const newTable = document.createElement('table');
     newTable.className = "chess-board";
+    const xArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    const wFigArr1 = ['', '♖', '♘', '♗', '♔', '♕', '♗', '♘', '♖'];
+    const wFigArr2 = ['', '♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'];
+    const bFigArr1 = ['', '♜', '♞', '♝', '♚', '♛', '♝', '♞', '♜'];
+    const bFigArr2 = ['', '♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟'];
 
-    white = true;
-    for (let i = 9; i > 1; i--) {
+
+    white = false;
+    for (let i = 9; i >= 1; i--) {
         const newTr = newTable.insertRow(9 - i);
-        for (let c = 9; c > 1; c--) {
-            const newTd = newTr.insertCell(9 - c);
-            newTd.html = c;
-            if (white)    {
-                newTd.className = 'white';
-                white = false;
+        for (let j = 0; j < 9; j++) {
+            if (i == 9) {
+                const newTh = document.createElement("th");
+                newTh.innerHTML = (xArr[j - 1] == undefined) ? '' : xArr[j - 1];
+                newTr.appendChild(newTh);
+            } else if (j == 0) {
+                const newTh = document.createElement("th");
+                newTh.innerHTML = i;
+                newTr.appendChild(newTh);
             } else {
-                newTd.className = 'black';
-                white = true;
+                const newTd = newTr.insertCell(j);
+
+                // Белые фигуры
+                if (i == 8) {
+                    newTd.innerHTML = wFigArr1[j]
+                };
+                if (i == 7) {
+                    newTd.innerHTML = wFigArr2[j];
+                };
+
+                // Черные фигуры
+                if (i == 2) {
+                    newTd.innerHTML = bFigArr2[j];
+                };
+                if (i == 1) {
+                    newTd.innerHTML = bFigArr1[j]
+                };
+
+
+                // Чередование CSS класса черный/белый
+                if (white) {
+                    newTd.className = xArr[j - 1] + i + ' white';
+                    white = false;
+                } else {
+                    newTd.className = xArr[j - 1] + i + ' black';
+                    white = true;
+                }
             }
-
         }
+        // С новой строки  меняем цвет/булиан булиан на противоположный, собственное ноухау
+        //white = 2 - Number(white) - 1;
+        // можно проще
+        white = !white;
     }
-
-
     board.appendChild(newTable);
 }
 
