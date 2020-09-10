@@ -78,7 +78,7 @@ function createCheessBoard() {
         for (let c = 9; c > 1; c--) {
             const newTd = newTr.insertCell(9 - c);
             newTd.html = c;
-            if (white) {
+            if (white)    {
                 newTd.className = 'white';
                 white = false;
             } else {
