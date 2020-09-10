@@ -1,0 +1,74 @@
+Index: .gitignor
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignor	(date 1599647033198)
++++ .gitignor	(date 1599647033198)
+@@ -0,0 +1,5 @@
++
++.idea/JavaScript_1.iml
++.idea/misc.xml
++.idea/vcs.xml
++.idea/modules.xml
+\ No newline at end of file
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(date 1599647745710)
++++ index.html	(date 1599647745710)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Практическое задание №5</title>
++    <script src=""></script>
++</head>
++<body>
++<h1>Практическое задание №5</h1>
++
++</body>
++</html>
+\ No newline at end of file
+Index: script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- script.js	(date 1599649325917)
++++ script.js	(date 1599649325917)
+@@ -0,0 +1,30 @@
++
++
++const basket = {
++    itemlist:[],
++    addItem: function (item) {
++        this.itemlist.push(item);
++    },
++    clear: function(){
++        this.itemlist = [];
++    },
++    calc: function () {
++        return this.itemlist.reduce(function(sum,item){
++            return sum + item.price;
++        })
++    },
++}
++
++const item1 = {
++    name: 'Штаны',
++    price: 10,
++};
++
++const item2 = {
++    name: 'Брюки',
++    price: 10,
++};
++
++basket.addItem(item1);
++basket.addItem(item2);
++console.log(basket)
+\ No newline at end of file

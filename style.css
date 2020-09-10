@@ -1,0 +1,22 @@
+.chess-board { border-spacing: 0; border-collapse: collapse; }
+td{
+    width: 100px;
+    height: 100px;
+
+}
+
+.white{
+    background: #e5e2e2;
+    outline: 1px solid;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+}
+
+.black{
+    background: #6f6d6b;
+    outline: 1px solid;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+}
