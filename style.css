@@ -19,4 +19,27 @@ td{
     vertical-align: middle;
 }
 
-/*https://snipp.ru/html-css/chess-field*/
+/*Интернет магазин*/
+
+.main-container{
+    margin: 0 auto;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    width: 1000px;
+    align-content: space-between;
+    justify-content: center;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.product-item{
+    border: 1px solid darkslateblue;
+    margin: 5px;
+    padding: 5px;
+}
+
+.cart{
+    width: 50%;
+}
